@@ -1,16 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>vibrant-ventures-site</title>
-    <meta name="description" content="GPT Engineer Generated Project" />
-    <meta name="author" content="GPT Engineer" />
-    <meta property="og:image" content="/og-image.svg" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="/.gpt_engineer/index.js" type="module"></script>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handcrafted Delights - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://placehold.co/200x50?text=Handcrafted+Delights" alt="Handcrafted Delights Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="custom.html">Custom Orders</a></li>
+            </ul>
+            <button class="cta-button">Shop Now</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Handcrafted Delights</h1>
+            <p>Discover our unique collection of handmade products</p>
+            <a href="products.html" class="cta-button">Explore Our Products</a>
+        </section>
+
+        <section class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://placehold.co/300x300?text=Product+1" alt="Product 1">
+                    <h3>Handmade Soap</h3>
+                    <p>$9.99</p>
+                    <button class="add-to-cart" data-id="1" data-name="Handmade Soap" data-price="9.99">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://placehold.co/300x300?text=Product+2" alt="Product 2">
+                    <h3>Scented Candle</h3>
+                    <p>$14.99</p>
+                    <button class="add-to-cart" data-id="2" data-name="Scented Candle" data-price="14.99">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://placehold.co/300x300?text=Product+3" alt="Product 3">
+                    <h3>Knitted Scarf</h3>
+                    <p>$24.99</p>
+                    <button class="add-to-cart" data-id="3" data-name="Knitted Scarf" data-price="24.99">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: info@handcrafteddelights.com</p>
+                <p>Phone: (555) 123-4567</p>
+                <p>Address: 123 Craft St, Artisan City, AC 12345</p>
+            </div>
+            <div class="social-links">
+                <h3>Follow Us</h3>
+                <a href="#" aria-label="Facebook">Facebook</a>
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="Twitter">Twitter</a>
+            </div>
+        </div>
+        <p>&copy; 2023 Handcrafted Delights. All rights reserved.</p>
+    </footer>
+
+    <div id="cart-popup" class="cart-popup">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button id="close-cart">Close</button>
+    </div>
+
+    <div id="newsletter-popup" class="newsletter-popup">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay updated with our latest products and offers!</p>
+        <form id="newsletter-form">
+            <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <button id="close-newsletter">Close</button>
+    </div>
+</body>
 </html>

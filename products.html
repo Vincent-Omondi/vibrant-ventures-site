@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handcrafted Delights - Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://placehold.co/200x50?text=Handcrafted+Delights" alt="Handcrafted Delights Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="custom.html">Custom Orders</a></li>
+            </ul>
+            <button id="view-cart" class="cta-button">View Cart</button>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Our Products</h1>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://placehold.co/300x300?text=Product+1" alt="Product 1">
+                <h3>Handmade Soap</h3>
+                <p>$9.99</p>
+                <button class="add-to-cart" data-id="1" data-name="Handmade Soap" data-price="9.99">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://placehold.co/300x300?text=Product+2" alt="Product 2">
+                <h3>Scented Candle</h3>
+                <p>$14.99</p>
+                <button class="add-to-cart" data-id="2" data-name="Scented Candle" data-price="14.99">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://placehold.co/300x300?text=Product+3" alt="Product 3">
+                <h3>Knitted Scarf</h3>
+                <p>$24.99</p>
+                <button class="add-to-cart" data-id="3" data-name="Knitted Scarf" data-price="24.99">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://placehold.co/300x300?text=Product+4" alt="Product 4">
+                <h3>Ceramic Mug</h3>
+                <p>$19.99</p>
+                <button class="add-to-cart" data-id="4" data-name="Ceramic Mug" data-price="19.99">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://placehold.co/300x300?text=Product+5" alt="Product 5">
+                <h3>Wooden Cutting Board</h3>
+                <p>$34.99</p>
+                <button class="add-to-cart" data-id="5" data-name="Wooden Cutting Board" data-price="34.99">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://placehold.co/300x300?text=Product+6" alt="Product 6">
+                <h3>Hand-painted Vase</h3>
+                <p>$29.99</p>
+                <button class="add-to-cart" data-id="6" data-name="Hand-painted Vase" data-price="29.99">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: info@handcrafteddelights.com</p>
+                <p>Phone: (555) 123-4567</p>
+                <p>Address: 123 Craft St, Artisan City, AC 12345</p>
+            </div>
+            <div class="social-links">
+                <h3>Follow Us</h3>
+                <a href="#" aria-label="Facebook">Facebook</a>
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="Twitter">Twitter</a>
+            </div>
+        </div>
+        <p>&copy; 2023 Handcrafted Delights. All rights reserved.</p>
+    </footer>
+
+    <div id="cart-popup" class="cart-popup">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button id="close-cart">Close</button>
+    </div>
+</body>
+</html>
