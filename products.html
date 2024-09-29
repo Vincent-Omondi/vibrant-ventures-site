@@ -4,63 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Handcrafted Delights - Products</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="static/script.js" defer></script>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <img src="https://placehold.co/200x50?text=Handcrafted+Delights" alt="Handcrafted Delights Logo">
+                <img src="static/img/logo.png" alt="Handcrafted Delights Logo" width="200" height="50">
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="products.html" class= "active">Products</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="custom.html">Custom Orders</a></li>
             </ul>
-            <button id="view-cart" class="cta-button">View Cart</button>
+            <button class="cta-button" id="view-cart">View Cart</button>
         </nav>
     </header>
 
     <main>
-        <h1>Our Products</h1>
+        <h1>Our Handcrafted Products</h1>
         <div class="product-grid">
             <div class="product-card">
-                <img src="https://placehold.co/300x300?text=Product+1" alt="Product 1">
-                <h3>Handmade Soap</h3>
-                <p>$9.99</p>
-                <button class="add-to-cart" data-id="1" data-name="Handmade Soap" data-price="9.99">Add to Cart</button>
+                <img src="static/img/product1.png" alt="Lavender Handmade Soap" width="300" height="400">
+                <h3>Lavender Handmade Soap</h3>
+                <p class="price">$9.99</p>
+                <p class="description">Gentle, aromatic soap made with natural lavender essential oils.</p>
+                <button class="add-to-cart" data-id="1" data-name="Lavender Handmade Soap" data-price="9.99">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="https://placehold.co/300x300?text=Product+2" alt="Product 2">
-                <h3>Scented Candle</h3>
-                <p>$14.99</p>
-                <button class="add-to-cart" data-id="2" data-name="Scented Candle" data-price="14.99">Add to Cart</button>
+                <img src="static/img/product2.png" alt="Vanilla Scented Candle" width="300" height="300">
+                <h3>Vanilla Scented Candle</h3>
+                <p class="price">$14.99</p>
+                <p class="description">Long-lasting soy candle with a warm, comforting vanilla scent.</p>
+                <button class="add-to-cart" data-id="2" data-name="Vanilla Scented Candle" data-price="14.99">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="https://placehold.co/300x300?text=Product+3" alt="Product 3">
-                <h3>Knitted Scarf</h3>
-                <p>$24.99</p>
-                <button class="add-to-cart" data-id="3" data-name="Knitted Scarf" data-price="24.99">Add to Cart</button>
+                <img src="static/img/product3.png" alt="Cozy Knitted Scarf" width="300" height="300">
+                <h3>Cozy Knitted Scarf</h3>
+                <p class="price">$24.99</p>
+                <p class="description">Soft, warm scarf hand-knitted with premium wool blend yarn.</p>
+                <button class="add-to-cart" data-id="3" data-name="Cozy Knitted Scarf" data-price="24.99">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="https://placehold.co/300x300?text=Product+4" alt="Product 4">
-                <h3>Ceramic Mug</h3>
-                <p>$19.99</p>
-                <button class="add-to-cart" data-id="4" data-name="Ceramic Mug" data-price="19.99">Add to Cart</button>
+                <img src="static/img/product4.png" alt="Handcrafted Earrings" width="300" height="300">
+                <h3>Handcrafted Earrings</h3>
+                <p class="price">$19.99</p>
+                <p class="description">Elegant, lightweight earrings made with locally sourced materials.</p>
+                <button class="add-to-cart" data-id="4" data-name="Handcrafted Earrings" data-price="19.99">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="https://placehold.co/300x300?text=Product+5" alt="Product 5">
-                <h3>Wooden Cutting Board</h3>
-                <p>$34.99</p>
-                <button class="add-to-cart" data-id="5" data-name="Wooden Cutting Board" data-price="34.99">Add to Cart</button>
+                <img src="static/img/product5.png" alt="Artisan Ceramic Mug" width="300" height="300">
+                <h3>Artisan Ceramic Mug</h3>
+                <p class="price">$29.99</p>
+                <p class="description">Uniquely designed, hand-thrown ceramic mug for your favorite beverages.</p>
+                <button class="add-to-cart" data-id="5" data-name="Artisan Ceramic Mug" data-price="29.99">Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="https://placehold.co/300x300?text=Product+6" alt="Product 6">
-                <h3>Hand-painted Vase</h3>
-                <p>$29.99</p>
-                <button class="add-to-cart" data-id="6" data-name="Hand-painted Vase" data-price="29.99">Add to Cart</button>
+                <img src="static/img/product6.png" alt="Handbound Leather Journal" width="300" height="300">
+                <h3>Handbound Leather Journal</h3>
+                <p class="price">$34.99</p>
+                <p class="description">Beautifully crafted leather journal with handmade paper pages.</p>
+                <button class="add-to-cart" data-id="6" data-name="Handbound Leather Journal" data-price="34.99">Add to Cart</button>
             </div>
         </div>
     </main>
@@ -75,12 +81,12 @@
             </div>
             <div class="social-links">
                 <h3>Follow Us</h3>
-                <a href="#" aria-label="Facebook">Facebook</a>
-                <a href="#" aria-label="Instagram">Instagram</a>
-                <a href="#" aria-label="Twitter">Twitter</a>
+                <a href="https://www.facebook.com/handcrafteddelights" aria-label="Facebook">Facebook</a>
+                <a href="https://www.instagram.com/handcrafteddelights" aria-label="Instagram">Instagram</a>
+                <a href="https://www.twitter.com/handcrafteddeli" aria-label="Twitter">Twitter</a>
             </div>
         </div>
-        <p>&copy; 2023 Handcrafted Delights. All rights reserved.</p>
+        <p class="copyright">&copy; 2024 Handcrafted Delights. All rights reserved.</p>
     </footer>
 
     <div id="cart-popup" class="cart-popup">
@@ -89,5 +95,5 @@
         <p>Total: $<span id="cart-total">0.00</span></p>
         <button id="close-cart">Close</button>
     </div>
-</body>
-</html>
+
+</body></html>
