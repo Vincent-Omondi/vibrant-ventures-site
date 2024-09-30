@@ -101,21 +101,21 @@ h1, h2, h3 {
 .hero {
     text-align: center;
     padding: 4rem 0;
-    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1596633607590-3cbacc39f25c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y3JhZnRzfHx8fHx8MTY4NzQwMTQ5OQ&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center/cover;
-    border-radius: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('img/handcrafted.jpg') no-repeat center center/cover;    border-radius: 10px;
     margin-bottom: 3rem;
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: var(--background-color);
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    color: var(--text-color);
+    color: var(--background-color);
 }
 
 /* Product Grid */
