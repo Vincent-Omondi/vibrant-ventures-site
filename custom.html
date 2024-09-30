@@ -3,62 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Handcrafted Delights - Custom Orders</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>Handcrafted Delights - Custom</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="static/script.js" defer></script>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <img src="https://placehold.co/200x50?text=Handcrafted+Delights" alt="Handcrafted Delights Logo">
+                <img src="static/img/logo.png" alt="Handcrafted Delights Logo" width="200" height="50">
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="custom.html" class="active">Custom Orders</a></li>
+                <li><a href="custom.html" class=""active>Custom Orders</a></li>
             </ul>
-            <button id="view-cart" class="cta-button">View Cart</button>
+            <button class="cta-button" id="view-cart">View Cart</button>
         </nav>
     </header>
 
     <main>
-        <section class="custom-order">
+        <div class="main-form"> 
             <h1>Custom Order Request</h1>
-            <p>Have a unique idea in mind? Let us bring your vision to life with our custom order service!</p>
-            <form id="custom-order-form">
-                <div class="form-group">
-                    <label for="customer-name">Name:</label>
-                    <input type="text" id="customer-name" name="customer-name" required>
-                </div>
-                <div class="form-group">
-                    <label for="customer-email">Email:</label>
-                    <input type="email" id="customer-email" name="customer-email" required>
-                </div>
-                <div class="form-group">
-                    <label for="product-type">Product Type:</label>
-                    <select id="product-type" name="product-type" required>
-                        <option value="">Select a product type</option>
-                        <option value="soap">Soap</option>
-                        <option value="candle">Candle</option>
-                        <option value="textile">Textile</option>
-                        <option value="pottery">Pottery</option>
-                        <option value="woodwork">Woodwork</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="custom-details">Custom Details:</label>
-                    <textarea id="custom-details" name="custom-details" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" min="1" required>
-                </div>
+            <form id="customOrderForm" class="customOrderForm">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="productType">Product Type:</label>
+                <select id="productType" name="productType" required>
+                    <option value="">Select a product type</option>
+                    <option value="soap">Handmade Soap</option>
+                    <option value="candle">Scented Candle</option>
+                    <option value="jewelry">Handcrafted Jewelry</option>
+                    <option value="textile">Textile Product</option>
+                    <option value="pottery">Pottery Item</option>
+                    <option value="other">Other (please specify)</option>
+                </select>
+
+                <label for="customDetails">Custom Details:</label>
+                <textarea id="customDetails" name="customDetails" required placeholder="Please describe your custom order request in detail. Include information such as colors, scents, materials, size, quantity, and any specific design elements you'd like."></textarea>
+
+                <label for="budget">Estimated Budget (USD):</label>
+                <input type="number" id="budget" name="budget" min="0" step="0.01" required>
+
+                <label for="timeline">Desired Timeline:</label>
+                <input type="date" id="timeline" name="timeline" required>
+
                 <button type="submit">Submit Custom Order Request</button>
             </form>
-        </section>
+        </div>
     </main>
 
     <footer>
@@ -71,12 +71,12 @@
             </div>
             <div class="social-links">
                 <h3>Follow Us</h3>
-                <a href="#" aria-label="Facebook">Facebook</a>
-                <a href="#" aria-label="Instagram">Instagram</a>
-                <a href="#" aria-label="Twitter">Twitter</a>
+                <a href="https://www.facebook.com/handcrafteddelights" aria-label="Facebook">Facebook</a>
+                <a href="https://www.instagram.com/handcrafteddelights" aria-label="Instagram">Instagram</a>
+                <a href="https://www.twitter.com/handcrafteddeli" aria-label="Twitter">Twitter</a>
             </div>
         </div>
-        <p>&copy; 2023 Handcrafted Delights. All rights reserved.</p>
+        <p class="copyright">&copy; 2024 Handcrafted Delights. All rights reserved.</p>
     </footer>
 
     <div id="cart-popup" class="cart-popup">
@@ -85,5 +85,5 @@
         <p>Total: $<span id="cart-total">0.00</span></p>
         <button id="close-cart">Close</button>
     </div>
-</body>
-</html>
+
+</body></html>

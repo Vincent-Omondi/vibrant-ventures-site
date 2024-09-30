@@ -16,6 +16,30 @@ function addToCart(event) {
     }
 
     updateCart();
+    showAddedToCartMessage(name);
+}
+
+function showAddedToCartMessage(productName) {
+    const message = document.createElement('div');
+    message.textContent = `${productName} added to cart!`;
+    message.style.position = 'fixed';
+    message.style.bottom = '20px';
+    message.style.right = '20px';
+    message.style.backgroundColor = 'var(--accent-color)';
+    message.style.color = 'white';
+    message.style.padding = '10px 20px';
+    message.style.borderRadius = '5px';
+    message.style.zIndex = '1000';
+    
+    document.body.appendChild(message);
+    
+    setTimeout(() => {
+        message.style.transition = 'opacity 0.5s ease';
+        message.style.opacity = '0';
+        setTimeout(() => {
+            document.body.removeChild(message);
+        }, 500);
+    }, 2000);
 }
 
 function updateCart() {
@@ -60,29 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Form validation
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-            if (validateForm(contactForm)) {
-                alert('Thank you for your message. We will get back to you soon!');
-                contactForm.reset();
-            }
-        });
-    }
-
-    const customOrderForm = document.getElementById('custom-order-form');
-    if (customOrderForm) {
-        customOrderForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-            if (validateForm(customOrderForm)) {
-                alert('Thank you for your custom order request. We will contact you shortly to discuss the details.');
-                customOrderForm.reset();
-            }
-        });
-    }
-
     // Newsletter popup
     const newsletterPopup = document.getElementById('newsletter-popup');
     const closeNewsletterButton = document.getElementById('close-newsletter');
@@ -111,27 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-function validateForm(form) {
-    let isValid = true;
-    const inputs = form.querySelectorAll('input, textarea, select');
-
-    inputs.forEach(input => {
-        if (input.hasAttribute('required') && !input.value.trim()) {
-            isValid = false;
-            input.classList.add('error');
-        } else {
-            input.classList.remove('error');
-        }
-
-        if (input.type === 'email' && !validateEmail(input.value)) {
-            isValid = false;
-            input.classList.add('error');
-        }
-    });
-
-    return isValid;
-}
-
 function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
@@ -144,4 +124,28 @@ navItems.forEach(item => {
     if (item.href === currentLocation) {
         item.classList.add('active');
     }
+});
+
+// Intersection Observer for fade-in effect
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.fade-in').forEach(element => {
+    element.style.opacity = '0';
+    element.style.transform = 'translateY(20px)';
+    element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(element);
 });
